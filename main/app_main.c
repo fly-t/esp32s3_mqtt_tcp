@@ -164,7 +164,6 @@ static void mqtt_app_start(void)
     /* The last argument may be used to pass data to the event handler, in this example mqtt_event_handler */
     esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, NULL);
     ESP_ERROR_CHECK(esp_mqtt_client_start(client));
- 
 }
 
 
@@ -172,8 +171,6 @@ static void mqtt_app_start(void)
 
 void app_main(void)
 {
-   
-
     ESP_LOGI(TAG, "[APP] Startup..");
     ESP_LOGI(TAG, "[APP] Free memory: %" PRIu32 " bytes", esp_get_free_heap_size());
     ESP_LOGI(TAG, "[APP] IDF version: %s", esp_get_idf_version());
